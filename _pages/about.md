@@ -23,4 +23,4 @@ My research interests mainly lie in machine learning and signal processing. For 
 
 I obtained my B.Sc. at joint programme between QMUL and BUPT, worked with Prof. Changjae Oh, in 2023.
 
-I am also a guitarist :guitar: and a music lover.
+I am also a guitarist 🎸 and a music lover.
