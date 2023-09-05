@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ziiihoooYe.github.io/sitemap.xml
+Sitemap: https://ziiihooo.com/sitemap.xml
