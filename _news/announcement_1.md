@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-we put <em><strong>Improving Image de-raining Models using Reference-guided Filtering</strong></em> on arXiv! 🥳 ✨
+Put <em><strong>Improving Image de-raining Models using Reference-guided Transformers</strong></em> on arXiv! ✨ 
