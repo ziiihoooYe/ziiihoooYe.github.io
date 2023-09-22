@@ -6,7 +6,7 @@ title: Zihao Ye # the website title (if blank, full name will be used instead)
 first_name: Zihao 
 middle_name: 
 last_name: Ye 
-email: ziiihoooYe@gmail.com
+email: ziiihooo.ye@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   
 footer_text: >
@@ -71,7 +71,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username:  # your GitHub user name
+github_username: ziiihoooYe # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
