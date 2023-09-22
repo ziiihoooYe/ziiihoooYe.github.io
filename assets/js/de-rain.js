@@ -62,14 +62,15 @@
         var image_ratio = 2;
 
         var indicator_image_size = 25;
-        var indicator_image_padding = 3;
+        var indicator_image_padding = 5;
+        var indicator_image_padding_top = 7;
         var indicator_box_top_padding = 8;
 
-        var button_width = 50;
-        var button_height = 20;
+        var button_width = 40;
+        var button_height = 16;
         var button_padding = 4;
 
-        var zoom_r = 27;
+        var zoom_r = 25;
         var zoom_padding = 10;
         var zoom_scale = 2;
 
@@ -78,9 +79,9 @@
         var height = image_group_height + indicator_image_size + indicator_image_padding + indicator_box_top_padding;
 
         var indicator_data = [
-            { x: 0, y: 0, id: 'Cityscapes', opacity: 1.0 },
-            { x: 2 * indicator_image_size + indicator_image_padding, y: 0, id: 'BDD', opacity: 0.2 }
-        ]
+            { x: 0, y: indicator_image_padding_top, id: 'Cityscapes', opacity: 1.0 },
+            { x: 2 * indicator_image_size + indicator_image_padding, y: indicator_image_padding_top, id: 'BDD', opacity: 0.2 }
+        ];
 
         var zoom_data = [
             { id: 'rn',cx: - (margin.left / 2), cy: image_size / 2, r: zoom_r },
@@ -154,7 +155,7 @@
         indicator_group
             .append('text')
             .attr('x', indicator_group.attr('width') / 2)
-            .attr('y', -indicator_box_top_padding / 2)
+            .attr('y', -indicator_box_top_padding / 2 - 2)
             .attr('text-anchor', 'middle')
             .style('font-weight', 700)
             .style('font-size', '6px')
@@ -175,7 +176,7 @@
                 x: 0, y: image_size + image_padding_rows, id: 'ref', link: base_link + 'ref0.png', title: 'Reference Image'
             },
             {
-                x: image_ratio * image_size + image_padding_columns, y: image_size + image_padding_rows, id: 'dr', link: base_link + 'dr0.png', title: 'Pipeline De-rained Result'
+                x: image_ratio * image_size + image_padding_columns, y: image_size + image_padding_rows, id: 'dr', link: base_link + 'dr0.png', title: 'Proposed De-rained Result'
             },
         ];
         var images = image_group.selectAll('image').data(image_data);
@@ -206,7 +207,6 @@
                     zoom_circle.each(function (zoomData) {
 
                         const matchedImageData = image_group.selectAll('image').nodes().find(imgData => imgData.id === zoomData.id);
-                        console.log('matchedImageData', matchedImageData.href);
                         // 检查是否已经存在一个与该 zoomData.id 关联的 <g> 元素
                         let clipGroup = zoom_group.select("#clipGroup-" + zoomData.id);
 
@@ -273,6 +273,14 @@
                     return 0.2
                 }
             })
+            var indicator_label = indicator_group.selectAll('.indicator-label').data(indicator_data);
+            indicator_label.style('opacity', function (d) {
+                if (boundData.id == d.id) {
+                    return 1.0;
+                } else {
+                    return 0.2
+                }
+            })
 
             base_data_id = boundData.id;
             base_link = '/assets/img/de-rain_img/' + base_data_id + '/';
@@ -285,13 +293,29 @@
 
         var indicator_images = indicator_group.selectAll('image').data(indicator_data);
 
-        indicator_images.enter()
+        indicator_group.selectAll('.indicator-label').data(indicator_data).enter()
             .append('text')
+            .attr('class', 'indicator-label')
+            .text(function (d) {
+                if (d.id == 'Cityscapes') {
+                    return 'Cityscapes-Rain';
+                } else if (d.id == 'BDD') {
+                    return 'BDD100K';
+                }
+            })
+            .attr('x', function (d) { return d.x + indicator_image_size; })
+            .attr('y', function (d) { return d.y - 2; })
+            .attr('text-anchor', 'middle')
+            .attr('text-anchor', 'middle')
+            .style('font-weight', 700)
+            .style('font-size', '5.5px')
+            .style('opacity', function (d) { return d.opacity; })
+            .style('font-family', 'sans-serif');
 
         indicator_images.enter()
             .append('image')
             .attr('class', 'indicator_image')
-            .attr('width', indicator_image_size * 2)
+            .attr('width', indicator_image_size * image_ratio)
             .attr('height', indicator_image_size)
             .attr('xlink:href', function (d) {
                 return '/assets/img/de-rain_img/' + d.id + '/dr0.png';
@@ -310,13 +334,13 @@
             .attr('y', button_padding)
             .style('fill', 'white')
             .style('stroke', 'gray')
-            .style('stroke-width', 1);
+            .style('stroke-width', 0.6);
 
         button_group
             .append('text')
             .attr('id', 'button_text')
             .style("text-anchor", "middle")
-            .text('MORE RESULT')
+            .text('SHUFFLE 🎲')
             .style("text-anchor", "middle")
             .attr('x', button_padding + button_width / 2)  // 水平居中
             .attr('y', button_padding + button_height / 2 + 2.1)  // 垂直居中
