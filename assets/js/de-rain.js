@@ -144,8 +144,8 @@
                 .append("clipPath")
                 .attr("id", "clip-" + d.id)
                 .append("circle")
-                .attr("cx", d.cx + margin.left)
-                .attr("cy", d.cy + margin.top )
+                .attr("cx", d.cx )
+                .attr("cy", d.cy )
                 .attr("r", d.r);
         });
 
@@ -198,23 +198,45 @@
                 // 如果鼠标在 rn, baseline, 或 dr 图像上
                 if (['rn', 'baseline', 'dr'].includes(imageID)) {
                     // 获取鼠标在图像上的坐标
-                    const [mx, my] = d3.pointer(event);
+                    var [mx, my] = d3.pointer(event);
+                    mx = mx - d.x;
+                    my = my - d.y;
 
                     // 更新每一个 zoom circle
                     zoom_circle.each(function (zoomData) {
-                        const matchedImageData = image_data.find(imgData => imgData.id === zoomData.id);
-                        d3.select("#clip-" + zoomData.id).selectAll("image").remove();
-                        const clipImage = d3.select("#clip-" + zoomData.id)
-                            .append("image")
-                            .attr("clip-path", "url(#clip-" + zoomData.id + ")")  // 添加这一行
-                            .attr("xlink:href", matchedImageData.link)
-                            .attr("x", zoomData.cx + margin.left - (mx * zoom_scale))
-                            .attr("y", zoomData.cy + margin.top - (my * zoom_scale))
+
+                        const matchedImageData = image_group.selectAll('image').nodes().find(imgData => imgData.id === zoomData.id);
+                        console.log('matchedImageData', matchedImageData.href);
+                        // 检查是否已经存在一个与该 zoomData.id 关联的 <g> 元素
+                        let clipGroup = zoom_group.select("#clipGroup-" + zoomData.id);
+
+                        // 如果不存在，则创建一个新的
+                        if (clipGroup.empty()) {
+                            clipGroup = zoom_group.append("g")
+                                .attr("id", "clipGroup-" + zoomData.id);
+                        }
+
+                        // 移除旧的 <image> 元素（如果有）
+                        clipGroup.selectAll("image").remove();
+
+                        // 在 <g> 元素中添加新的 <image>
+                        const clipImage = clipGroup.append("image")
+                            .attr("clip-path", "url(#clip-" + zoomData.id + ")")  // 应用 clip-path 属性
+                            .attr("xlink:href", matchedImageData.getAttributeNS('http://www.w3.org/1999/xlink', 'href'))
+                            .attr("x", zoomData.cx  - (mx * zoom_scale))
+                            .attr("y", zoomData.cy  - (my * zoom_scale))
                             .attr("width", image_ratio * image_size * zoom_scale)
                             .attr('z', 1)
                             .attr("height", image_size * zoom_scale);
                     });
+
                 }
+            })
+            .on("mouseout", function () {
+                zoom_circle.each(function (zoomData) {
+                    // 在这里移除或重置剪切区域的内容
+                    zoom_group.select("#clipGroup-" + zoomData.id).selectAll('image').remove();
+                });
             });
 
 

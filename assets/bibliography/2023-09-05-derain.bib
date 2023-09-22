@@ -1,0 +1,56 @@
+
+
+@article{Cityscapes-Rain,
+	abstract = {Rain fills the atmosphere with water particles, which breaks the common assumption that light travels unaltered from the scene to the camera. While it is well-known that rain affects computer vision algorithms, quantifying its impact is difficult. In this context, we present a rain rendering pipeline that enables the systematic evaluation of common computer vision algorithms to controlled amounts of rain. We present three different ways to add synthetic rain to existing images datasets: completely physic-based; completely data-driven; and a combination of both. The physic-based rain augmentation combines a physical particle simulator and accurate rain photometric modeling. We validate our rendering methods with a user study, demonstrating our rain is judged as much as 73{\%} more realistic than the state-of-the-art. Using our generated rain-augmented KITTI, Cityscapes, and nuScenes datasets, we conduct a thorough evaluation of object detection, semantic segmentation, and depth estimation algorithms and show that their performance decreases in degraded weather, on the order of 15{\%} for object detection, 60{\%} for semantic segmentation, and 6-fold increase in depth estimation error. Finetuning on our augmented synthetic data results in improvements of 21{\%} on object detection, 37{\%} on semantic segmentation, and 8{\%} on depth estimation.},
+	author = {Tremblay, M. and Halder, S. S. and de Charette, R. and Lalonde, J.},
+	date = {2021/02/01},
+	date-added = {2023-09-14 15:12:49 +0800},
+	date-modified = {2023-09-14 15:12:49 +0800},
+	doi = {10.1007/s11263-020-01366-3},
+	id = {Tremblay2021},
+	isbn = {1573-1405},
+	journal = {International Journal of Computer Vision},
+	number = {2},
+	pages = {341--360},
+	title = {Rain Rendering for Evaluating and Improving Robustness to Bad Weather},
+	url = {https://doi.org/10.1007/s11263-020-01366-3},
+	volume = {129},
+	year = {2021},
+	bdsk-url-1 = {https://doi.org/10.1007/s11263-020-01366-3}
+}
+
+@InProceedings{bdd100k,
+    author = {Yu, F. and Chen, H. and Wang, X. and Xian, W. and Chen,
+              Y. and Liu, F. and Madhavan, V. and Darrell, T.},
+    title = {BDD100K: A Diverse Driving Dataset for Heterogeneous Multitask Learning},
+    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+    year = {2020}
+}
+
+@InProceedings{Uformer,
+    author    = {Wang, Z. and Cun, X. and Bao, J. and Zhou, W. and Liu, J. and Li, H.},
+    title     = {Uformer: A General U-Shaped Transformer for Image Restoration},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition },
+    year      = {2022},
+}
+
+ @inproceedings{PReNet,
+   title={Progressive Image Deraining Networks: A Better and Simpler Baseline},
+   author={Ren, D. and Zuo, W. and Hu, Q. and Zhu, P. and Meng, D.},
+   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition },
+   year={2019},
+ }
+
+@article{SyRaGAN,
+title = {Synthesized rain images for deraining algorithms},
+journal = {Neurocomputing},
+volume = {492},
+pages = {421-439},
+year = {2022},
+issn = {0925-2312},
+doi = {https://doi.org/10.1016/j.neucom.2022.04.034},
+url = {https://www.sciencedirect.com/science/article/pii/S0925231222004040},
+author = {J. Choi and D. H. Kim and S. Lee and S. H. Lee and B. C. Song},
+keywords = {Rain image synthesis, Rain streak, Generative model, Rain dataset, Image-to-image translation},
+abstract = {Since most of the rainy scene datasets used for training single image rain removal (SIRR) algorithms are constructed by blending artificial rain streaks with source images, it is difficult for a machine trained with such datasets to understand the patterns of real or realistic rain streaks. So, several studies have been attempted to build a real rainy scene dataset. However, since collecting real rainy scenes itself requires significant costs, the real rainy scene datasets provided by some studies cover only very limited rainy environment(s). This paper presents a new approach to synthesize realistic rainy scenes using GAN, which is a world-first attempt as far as we know. The proposed method builds a representation space to which rain streaks of multiple styles are smoothly mapped by learning the distributions of various rain datasets. The representation space allows control over the generated rain streaks. Also, the proposed method can synthesize multiple rainy scenes per clean (source) scene simultaneously, thereby a synthesized rain image dataset (SyRa) (Dataset can be found here: https://github.com/jaewoong1/SyRa-Synthesized_Rain_dataset) consisting of 11K clean images and 55K rainy images was constructed. Finally, this paper provides benchmarking results of several SIRR methods trained with SyRa. This result will be very useful for developing SIRR algorithms that can cope well with the actual rain environment.}
+}
