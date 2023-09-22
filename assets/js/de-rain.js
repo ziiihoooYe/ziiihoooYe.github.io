@@ -65,7 +65,7 @@
         var indicator_image_padding = 3;
         var indicator_box_top_padding = 8;
 
-        var button_width = 60;
+        var button_width = 50;
         var button_height = 20;
         var button_padding = 4;
 
@@ -319,9 +319,9 @@
             .text('MORE RESULT')
             .style("text-anchor", "middle")
             .attr('x', button_padding + button_width / 2)  // 水平居中
-            .attr('y', button_padding + button_height / 2 + 2.5)  // 垂直居中
+            .attr('y', button_padding + button_height / 2 + 2.1)  // 垂直居中
             .style("font-weight", 600)
-            .style("font-size", '7px')
+            .style("font-size", '5.5px')
             .style("font-family", "sans-serif");
         
         button_group
