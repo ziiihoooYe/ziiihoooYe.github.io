@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: zihao_profile2.png
+  image: zihao_profile2.jpeg
   image_circular: false # crops the image to make it circular
   address: > 
         Chongqing, China
