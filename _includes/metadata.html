@@ -159,7 +159,7 @@
         {%- assign sameaslinks = sameaslinks | push: link -%}
     {%- endif -%}
     {%- if site.zhihu_userid -%}
-    {%- capture link -%}https://www.zhihu.com/people/{{ site.zhihu_userid }}{%- endcapture -%}
+    {%- capture link -%}https://www.zhihu.com/people/{{ site.zhihu_userid }}/posts{%- endcapture -%}
     {%- assign sameaslinks = sameaslinks | push: link -%}
     {%- endif -%}
     {%- if site.keybase_username -%}
