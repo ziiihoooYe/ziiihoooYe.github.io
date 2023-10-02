@@ -158,6 +158,10 @@
         {%- capture link -%}https://www.strava.com/athletes/{{ site.strava_userid }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
     {%- endif -%}
+    {%- if site.zhihu_userid -%}
+    {%- capture link -%}https://www.zhihu.com/people/{{ site.zhihu_userid }}{%- endcapture -%}
+    {%- assign sameaslinks = sameaslinks | push: link -%}
+    {%- endif -%}
     {%- if site.keybase_username -%}
         {%- capture link -%}https://keybase.io/{{ site.keybase_username }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
