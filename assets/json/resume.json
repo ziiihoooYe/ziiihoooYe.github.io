@@ -47,15 +47,22 @@
       "name": "Tsinghua Statistical Artificial Intelligence & Learning Laboratory (TSAIL Lab)<br> Tsinghua University <br> Supervised by <b>Prof. Jianfei Chen</b>",
       "position": "Visiting Student",
       "startDate": "Apr 2022",
-      "endDate": "now",
+      "endDate": "Jan 2024",
       "highlights": [
         "Neural Network Quantization",
-        "Diffusion Models",
+        "Diffusion Model",
         "Deep learning Stochasticity"
       ]
     }
   ],
   "work":[
+    {
+      "name": "China Construction Bank <br> Financial Technology Department",
+      "position": "Financial Technology Engineer (Intern) ",
+      "startDate": "Jul 2020",
+      "endDate": "Sep 2020",
+      "highlights": []
+    },
     {
       "name": "Southwest Securities <br> Quantitative Investment Department",
       "position": "Machine Learning Quantitative Researcher (Intern)",
@@ -64,11 +71,13 @@
       "highlights": []
     },
     {
-      "name": "China Construction Bank <br> Financial Technology Department",
-      "position": "Financial Technology Engineer (Intern) ",
-      "startDate": "Jul 2020",
-      "endDate": "Sep 2020",
-      "highlights": []
+      "name": "Honor of Kings, Tencent",
+      "position": "Application Researcher (Intern)",
+      "startDate": "Jan 2024",
+      "endDate": "Now",
+      "highlights": [
+        "Recommendation System"
+      ]
     }
   ],
   "awards": [],
