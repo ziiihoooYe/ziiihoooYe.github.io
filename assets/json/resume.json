@@ -55,7 +55,7 @@
       ]
     }
   ],
-  "work":[
+  "work": [
     {
       "name": "China Construction Bank <br> Financial Technology Department",
       "position": "Financial Technology Engineer (Intern) ",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Honor of Kings, Tencent",
-      "position": "Application Researcher (Intern)",
+      "position": "Machine Learning Engineering (Intern)",
       "startDate": "Jan 2024",
       "endDate": "Now",
       "highlights": [
