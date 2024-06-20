@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2023-09-04 
+date: 2024-06-07
 inline: true
-related_posts: false
+related_posts: true
 ---
 
-Put <em><strong>Improving Image de-raining Models using Reference-guided Transformers</strong></em> on arXiv! ✨ 
+[A paper on reference-guided image filtering (de-raining)](/blog/2024/derain/) was accepted to ICIP! 🎉✨
