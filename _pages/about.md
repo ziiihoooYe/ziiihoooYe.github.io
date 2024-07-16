@@ -9,7 +9,6 @@ profile:
   image: zihao_profile3.JPG
   image_circular: false # crops the image to make it circular
   address: > 
-        Chongqing, China
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts

@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: bio
+title: cv
 nav: true
 nav_order: 4
 cv_pdf: ZihaoCV.pdf

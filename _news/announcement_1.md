@@ -5,4 +5,4 @@ inline: true
 related_posts: true
 ---
 
-[A paper on reference-guided image filtering (de-raining)](/blog/2024/derain/) was accepted to ICIP! 🎉✨
+[A paper on reference-guided image filtering (de-raining)](/blog/2024/derain/) was accepted to [ICIP 2024](https://2024.ieeeicip.org)! 🎉✨
