@@ -16,10 +16,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-Hi, I am Zihao Ye (叶子皓), which means “Luminous Leaf” in the cultural context of China. I am currently an M.Sc. student in the Artificial Intelligence Engineering - Information Security program at Carnegie Mellon University.
+Hi, I’m Zihao Ye (叶子皓), which means “Luminous Leaf” in the cultural context of China. I received my M.S. from Carnegie Mellon University, where I worked with [Prof. Pradeep Ravikumar](https://www.cs.cmu.edu/~pradeepr/) on tabular foundation models and structured representation learning.
 
-My current research interests are representation learning theory and application. My previous experience can be found in my [bio](/cv/).
+My current research interests are representation learning theory and application, with a recent focus on structure-aware modeling for tabular and relational data. My previous experience can be found in my [bio](/cv/).
 
-I obtained my B.Sc. through a joint program between Queen Mary University of London and Beijing University of Posts and Telecommunications, and I worked with [Prof. Changjae Oh](http://eecs.qmul.ac.uk/~coh/index.html), in 2023.
+Previously, I earned my B.S. through a joint program between QMUL and BUPT. During my undergraduate studies, I worked with [Prof. Changjae Oh](http://eecs.qmul.ac.uk/~coh/index.html) on computer vision and trustworthy AI.
 
-In addition to my academic pursuits, I am also passionate about music. I play guitar 🎸 and sing.
+In addition to my research pursuits, I am also passionate about music. I play guitar 🎸 and sing.
