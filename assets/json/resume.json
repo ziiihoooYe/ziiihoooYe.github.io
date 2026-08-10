@@ -72,7 +72,7 @@
       ]
     },
     {
-      "name": "<a href='https://www.woodwide.ai'>Wood Wide AI</a>, Pittsburgh, United States (remote)",
+      "name": "<a href='https://www.woodwide.ai'>Wood Wide AI</a>, Pittsburgh, United States",
       "position": "Member of Technical Staff",
       "startDate": "Jan 2026",
       "endDate": "Present",
@@ -84,23 +84,14 @@
       ]
     }
   ],
-  "awards": [
+  "service": [
     {
-      "title": "Reviewer, Journal of Machine Learning Research (JMLR)",
-      "date": "2026",
-      "awarder": "JMLR"
-    },
-    {
-      "title": "INI Fellowship, merit-based tuition scholarship",
-      "date": "2024",
-      "awarder": "Carnegie Mellon University"
-    },
-    {
-      "title": "S-level performance rating, top evaluation tier",
-      "date": "2024",
-      "awarder": "Tencent"
+      "organization": "<a href='https://www.jmlr.org'>Journal of Machine Learning Research</a> (JMLR)",
+      "position": "Reviewer",
+      "startDate": "2026"
     }
   ],
+  "awards": [],
   "certificates": [],
   "publications": [],
   "skills": [],
